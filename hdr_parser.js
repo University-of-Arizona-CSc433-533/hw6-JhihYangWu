@@ -210,4 +210,4 @@ function parseHdr(buffer) {
     }
 }
 
-module.exports = parseHdr;
+//module.exports = parseHdr;
