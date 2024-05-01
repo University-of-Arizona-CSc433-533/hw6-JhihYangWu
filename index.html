@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HW6 JhihYang Wu</title>
+    </head>
+    <body>
+        <input type="file" id="load_image">
+        <div>
+            <p align="center">
+            <input type="range" id="gammaID" name="pexp"
+                   value="1.0" min="0.04" max="25.0" step="0.01" style="width:80%">
+            <p align="center">Gamma: <span id="gammaLabelID"></span></p>
+            </p>
+        </div>
+        <div>
+            <p align="center">
+            <input type="range" id="compressionID" name="pexp"
+                   value="5.0" min="5.0" max="100.0" step="1.0" style="width:80%">
+            <p align="center">Compression Factor: <span id="compressionLabelID"></span></p>
+            </p>
+        </div>
+        <div>
+            <p align="center">
+            <input type="range" id="filterID" name="pexp"
+                   value="11.0" min="5.0" max="21.0" step="1.0" style="width:80%">
+            <p align="center">Filter Size: <span id="filterLabelID"></span></p>
+            </p>
+        </div>
+        <div>
+            <p align="center">
+            <input type="range" id="methodID" name="pexp"
+                   value="1.0" min="0.0" max="1.0" step="1.0" style="width:5%">
+            <p align="center" id="methodIDlabel">Method: Bilateral Filters</span></p>
+            </p>
+        </div>
+        <div>
+            <p align="center">
+            <input type="range" id="kernelID" name="pexp"
+                   value="0.0" min="0.0" max="1.0" step="1.0" style="width:5%">
+            <p align="center" id="kernelIDlabel">Kernel Type: Box</span></p>
+            </p>
+        </div>
+        <div id="lastRendered"></div>
+        <p align="center">
+            <canvas id="canvas" width="1" height="1" style="width: 50%;"></canvas>
+        </p>
+        <p align="center">
+            <button type="button" id="save_scene_picture">Save current framebuffer to PPM!</button> 
+        </p>
+    </body>
+    <script src="hdr_parser.js"></script>
+    <script src="FileSaver.js"></script>
+    <script src="index.js"></script>
+</html>
